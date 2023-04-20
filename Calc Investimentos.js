@@ -10,17 +10,20 @@ function calcularRendimento() {
   const balance = Number(valorAtualInput.value);
   const times = Number(quantidadeDiasInput.value);
 
+
   if (!valueInvesting || !balance || !times) {
     resultado.innerHTML = "Por favor, preencha todos os valores.";
     return;
   }
 
-  let profit = balance - valueInvesting;
+  let total = valueInvesting + balance;
+  let profit = total - valueInvesting;
   let tax = (profit / valueInvesting * 100);
   let taxDay = tax / times;
 
-  resultado.innerHTML = `${tax.toFixed(2)}% de lucro coletado.<br>Estimativa diária: ${taxDay.toFixed(2)}% ao dia.`;
+  resultado.innerHTML = `Saldo atual= $${total.toFixed(2)} dolares<br> ${tax.toFixed(2)}% de lucro coletado.<br>Estimativa diária: ${taxDay.toFixed(2)}% ao dia.`;
 }
+
 
 function resetarInputs() {
   valorInicialInput.value = "";
