@@ -9,7 +9,12 @@ function calcularRendimento() {
   const valueInvesting = Number(valorInicialInput.value);
   const balance = Number(valorAtualInput.value);
   const times = Number(quantidadeDiasInput.value);
-  
+
+  if (!valueInvesting || !balance || !times) {
+    resultado.innerHTML = "Por favor, preencha todos os valores.";
+    return;
+  }
+
   let profit = balance - valueInvesting;
   let tax = (profit / valueInvesting * 100);
   let taxDay = tax / times;
