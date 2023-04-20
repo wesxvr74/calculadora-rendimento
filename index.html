@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Investimentos</title>
-    <link rel="stylesheet" href="https://wesxvr74.github.io/calculadora-rendimento/styles.css">
-  </head>
-  <body>
+    <link rel="stylesheet" href="Calc Investimentos.css">
+</head>
+
+<body>
     <header>
-      <h1>Calcule o Rendimento da sua pool</h1>
+        <h1>Calcule o Rendimento da sua pool</h1>
     </header>
 
     <main class="main-container">
-      <div class="form-group">
-        <div class="input-container">
-          <label for="initial-value">Valor Investido:</label>
-          <input type="number" id="initial-value" placeholder="Digite o valor inicial">
+        <div class="form-group">
+            <div class="input-container">
+                <label for="initial-value">Valor Inicial Investido:</label>
+                <input type="number" id="initial-value" placeholder="Digite o valor inicial">
+            </div>
+            <div class="input-container">
+                <label for="current-value">Taxas a coletar:</label>
+                <input type="number" id="current-value" placeholder="Digite o saldo de taxas a coletar">
+            </div>
+            <div class="input-container">
+                <label for="investment-days">Quant. de Dias:</label>
+                <input type="number" id="investment-days" placeholder="Há quantos dias aplicou o valor? ">
+            </div>
         </div>
-        <div class="input-container">
-          <label for="current-value">Valor Atual:</label>
-          <input type="number" id="current-value" placeholder="Digite o valor atual (saldo + taxas)">
-        </div>
-        <div class="input-container">
-          <label for="investment-days">Quant. de Dias:</label>
-          <input type="number" id="investment-days" placeholder="Há quantos dias aplicou o valor? ">
-        </div>
-      </div>
 
-      <div class="button-container">
-        <button class="button" onclick="calculateInvestment()">Calcular</button>
-        <button class="button button-clear" onclick="resetInputs()">Limpar</button>
-      </div>
+        <div class="button-container">
+            <button class="button" onclick="calculateInvestment()">Calcular</button>
+            <button class="button button-clear" onclick="resetInputs()">Limpar</button>
+        </div>
 
-      <div id="result-container"></div>
+        <div id="result-container"></div>
     </main>
 
     <script src="Calc Investimentos.js"></script>
-  </body>
+</body>
+
 </html>
