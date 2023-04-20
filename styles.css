@@ -33,6 +33,11 @@ header {
   color: #fff;
 }
 
+@media (max-width: 412px) {
+  header{
+    width: 350px;
+  }
+}
 
 .main-container {
   display: flex;
